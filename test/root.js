@@ -1,6 +1,7 @@
 const path = require('path');
 const jsdom = require('jsdom').jsdom;
 const fs = require('fs');
+const { fetch } = require('whatwg-fetch');
 
 const html = fs.readFileSync(path.resolve(__dirname, '..', 'index.html'));
 const exposedProperties = ['window', 'navigator', 'document'];

@@ -1,3 +1,19 @@
-const app = "I don't do much.";
+const React = require('react');
+const ReactDOM = require('react-dom');
+
+const LatestMovieReviewsContainer = require(
+  './components/LatestMovieReviewsContainer'
+);
+const SearchableMovieReviewsContainer = require(
+  './components/SearchableMovieReviewsContainer'
+);
+
+ReactDOM.render(
+  <div className="app">
+    <LatestMovieReviewsContainer />
+    <SearchableMovieReviewsContainer />
+  </div>,
+  document.getElementById('main')
+);
 
 require('./test/index-test.js'); // Leave this in!
