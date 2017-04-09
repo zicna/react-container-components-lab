@@ -1,12 +1,12 @@
-const React = require('react');
-const { shallow, mount } = require('enzyme');
+import React from 'react';
+import { shallow, mount } from 'enzyme';
 
 const Noop = (props) => { return <p>Noop</p> };
-const SearchableMovieReviewsContainer = require(
+import SearchableMovieReviewsContainer from
   '../components/SearchableMovieReviewsContainer'
-);
+;
 
-const testReviews = require('./test-reviews');
+import testReviews from './test-reviews';
 
 describe('<SearchableMovieReviewsContainer />', () => {
   let wrapper;

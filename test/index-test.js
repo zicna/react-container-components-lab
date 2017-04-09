@@ -1,5 +1,5 @@
-const React = require('react');
-const { shallow } = require('enzyme');
+import React from 'react';
+import { shallow } from 'enzyme';
 
 require('./MovieReviews_test');
 require('./LatestMovieReviewsContainer_test');

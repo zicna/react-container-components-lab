@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     "display_title": "Chicken People",
     "mpaa_rating": "",

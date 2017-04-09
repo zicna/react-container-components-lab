@@ -1,10 +1,10 @@
-const React = require('react');
-const { shallow } = require('enzyme');
+import React from 'react';
+import { shallow } from 'enzyme';
 
 const Noop = (props) => { return <p>Noop</p> };
-const MovieReviews = require('../components/MovieReviews');
+import MovieReviews from '../components/MovieReviews';
 
-const testReviews = require('./test-reviews');
+import testReviews from './test-reviews';
 
 describe('<MovieReviews />', () => {
   let wrapper;
