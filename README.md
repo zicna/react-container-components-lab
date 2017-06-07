@@ -37,7 +37,7 @@ In addition to making a call to these URLs you will need to request an API key f
 
 `https://api.nytimes.com/svc/movies/v2/reviews/all.json?api-key=<your key here>`.
 
-You can use whatever library you'd like to make the call to the API, but [whatwg-fetch](https://www.npmjs.com/package/whatwg-fetch) provides a particularly nice API, so you might consider using it.
+For fetching from the API make sure to use [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch) provides a particularly nice API, so you might consider using it.
 
 For further information about the _New York Times_ Movie Reviews API &mdash;  including a sandbox where you can view the  data that the API returns &mdash;  please consult [their documentation](http://developer.nytimes.com/movie_reviews_v2.json#/Documentation/GET/reviews/search.json).
 
