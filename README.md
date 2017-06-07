@@ -33,7 +33,7 @@ In order to fetch data from the _New York Times_ API, you'll need to make a call
 * For the latest movie reviews: `https://api.nytimes.com/svc/movies/v2/reviews/all.json`
 * To query the reviews API: `https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=<search-term>`
 
-In addition to making a call to these URLs you will need to request an API key from [here](https://developer.nytimes.com/signup). Once you have they key you will "sign" your requests by attaching the key to the URL, like so: 
+In addition to making a call to these URLs you will need to request an API key from [here](https://developer.nytimes.com/signup). Once you have the key, you will "sign" your requests by attaching the key to the URL like so: 
 
 `https://api.nytimes.com/svc/movies/v2/reviews/all.json?api-key=<your key here>`.
 
@@ -46,3 +46,5 @@ For further information about the _New York Times_ Movie Reviews API &mdash;  in
 - [Container Components](https://medium.com/@learnreact/container-components-c0e67432e005#.2kd1wuyp4)
 - [CSS Tricks: Container Components](https://css-tricks.com/learning-react-container-components/)
 - [_New York Times_ Movie Reviews API Documentation](http://developer.nytimes.com/movie_reviews_v2.json#/Documentation)
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/react-container-components-lab'>Container Components Lab</a> on Learn.co and start learning to code for free.</p>
