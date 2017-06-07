@@ -1,10 +1,11 @@
 import React from 'react';
+import { expect } from 'chai';
 import { shallow } from 'enzyme';
 
-const Noop = (props) => { return <p>Noop</p> };
-import MovieReviews from '../components/MovieReviews';
-
+import MovieReviews from '../src/components/MovieReviews';
 import testReviews from './test-reviews';
+
+const Noop = (props) => { return <p>Noop</p> };
 
 describe('<MovieReviews />', () => {
   let wrapper;
@@ -16,8 +17,8 @@ describe('<MovieReviews />', () => {
 
   it('should be a stateless functional component', () => {
     const tryToGetState = () => { wrapper.state(); }
-    expect(MovieReviews.prototype).toExist('Component is not yet defined.');
-    expect(tryToGetState).toThrow(
+    expect(MovieReviews.prototype, 'Component is not yet defined.').to.exist;
+    expect(tryToGetState).to.throw(
       'ShallowWrapper::state() can only be called on class components',
       'Component should not have state.'
     );
@@ -25,16 +26,15 @@ describe('<MovieReviews />', () => {
 
   it('should have defaultProp "reviews"', () => {
     const defaultProps = MovieReviews.defaultProps;
-    expect(defaultProps).toExist('defaultProps is not defined.');
-    expect(defaultProps).toIncludeKey('reviews');
+    expect(defaultProps, 'defaultProps is not defined.').to.exist;
+    expect(defaultProps).to.have.key('reviews');
   });
 
   it('should have a top-level component with class "review-list"', () => {
-    expect(wrapper.hasClass('review-list')).toBeTruthy();
+    expect(wrapper.hasClass('review-list')).to.be.true;
   });
 
   it('should render all the reviews', () => {
-    expect(wrapper.find('.review').length).toEqual(testReviews.length);
+    expect(wrapper.find('.review').length).to.equal(testReviews.length);
   });
-
 });

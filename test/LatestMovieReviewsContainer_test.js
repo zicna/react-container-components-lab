@@ -1,12 +1,11 @@
 import React from 'react';
+import { expect } from 'chai';
 import { shallow, mount } from 'enzyme';
 
-const Noop = (props) => { return <p>Noop</p> };
-import LatestMovieReviewsContainer from
-  '../components/LatestMovieReviewsContainer'
-;
-
+import LatestMovieReviewsContainer from '../src/components/LatestMovieReviewsContainer';
 import testReviews from './test-reviews';
+
+const Noop = (props) => { return <p>Noop</p> };
 
 describe('<LatestMovieReviewsContainer />', () => {
   let wrapper;
@@ -18,21 +17,17 @@ describe('<LatestMovieReviewsContainer />', () => {
 
   it('should have state', () => {
     const tryToGetState = () => { wrapper.state(); }
-    expect(LatestMovieReviewsContainer.prototype).toExist(
-      'Component is not yet defined.'
-    );
-    expect(tryToGetState).toNotThrow('Component should be class component.');
+    expect(LatestMovieReviewsContainer.prototype, 'Component is not yet defined.').to.exist;
+    expect(tryToGetState).to.not.throw('Component should be class component.');
   });
 
   it('should have a state property "reviews"', () => {
-    expect(LatestMovieReviewsContainer.prototype).toExist(
-      'Component is not yet defined.'
-    );
-    expect(wrapper.state()).toIncludeKey('reviews');
+    expect(LatestMovieReviewsContainer.prototype, 'Component is not yet defined.').to.exist;
+    expect(wrapper.state()).to.have.key('reviews');
   });
 
   it('should have top-level element with class "latest-movie-reviews"', () => {
-    expect(wrapper.hasClass('latest-movie-reviews')).toBeTruthy();
+    expect(wrapper.hasClass('latest-movie-reviews')).to.be.true;
   });
 
   it('should render reviews after reviews state updated', () => {
@@ -40,7 +35,7 @@ describe('<LatestMovieReviewsContainer />', () => {
       mount(<Noop />) : mount(<LatestMovieReviewsContainer />);
     wrapper.setState({ reviews: testReviews });
     wrapper.update();
-    expect(wrapper.find('.review').length).toEqual(testReviews.length);
+    expect(wrapper.find('.review').length).to.equal(testReviews.length);
   });
 
 });

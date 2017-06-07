@@ -1,12 +1,11 @@
 import React from 'react';
+import { expect } from 'chai'
 import { shallow, mount } from 'enzyme';
 
-const Noop = (props) => { return <p>Noop</p> };
-import SearchableMovieReviewsContainer from
-  '../components/SearchableMovieReviewsContainer'
-;
-
+import SearchableMovieReviewsContainer from '../src/components/SearchableMovieReviewsContainer';
 import testReviews from './test-reviews';
+
+const Noop = (props) => { return <p>Noop</p> };
 
 describe('<SearchableMovieReviewsContainer />', () => {
   let wrapper;
@@ -18,23 +17,17 @@ describe('<SearchableMovieReviewsContainer />', () => {
 
   it('should have state', () => {
     const tryToGetState = () => { wrapper.state(); }
-    expect(SearchableMovieReviewsContainer.prototype).toExist(
-      'Component is not yet defined.'
-    );
-    expect(tryToGetState).toNotThrow('Component should be class component.');
+    expect(SearchableMovieReviewsContainer.prototype, 'Component is not yet defined.').to.exist;
+    expect(tryToGetState).to.not.throw('Component should be class component.');
   });
 
-  it('should have a state property "reviews"', () => {
-    expect(SearchableMovieReviewsContainer.prototype).toExist(
-      'Component is not yet defined.'
-    );
-    expect(wrapper.state()).toIncludeKey('reviews');
+  it('should have the state properties "reviews" and "searchTerm"', () => {
+    expect(SearchableMovieReviewsContainer.prototype, 'Component is not yet defined.').to.exist;
+    expect(wrapper.state()).to.have.all.keys('searchTerm', 'reviews');
   });
 
   it('should have top-level element with class "searchable-movie-reviews"', () => {
-    expect(wrapper.hasClass('searchable-movie-reviews')).toBeTruthy(
-      'Missing top-level element with class "searchable-movie-reviews"'
-    );
+    expect(wrapper.hasClass('searchable-movie-reviews'), 'Missing top-level element with class "searchable-movie-reviews"').to.be.true;
   });
 
   it('should render reviews after reviews state updated', () => {
@@ -42,9 +35,6 @@ describe('<SearchableMovieReviewsContainer />', () => {
       mount(<Noop />) : mount(<SearchableMovieReviewsContainer />);
     wrapper.setState({ reviews: testReviews });
     wrapper.update();
-    expect(wrapper.find('.review').length).toEqual(testReviews.length);
+    expect(wrapper.find('.review').length).to.equal(testReviews.length);
   });
-
-  // TODO: test for rendering of MovieReviews somehow?
-
 });
