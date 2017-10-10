@@ -1,9 +1,11 @@
 import React from 'react';
 import { expect } from 'chai'
-import { shallow, mount } from 'enzyme';
-
+import Enzyme, { shallow, mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import SearchableMovieReviewsContainer from '../src/components/SearchableMovieReviewsContainer';
 import testReviews from './test-reviews';
+
+Enzyme.configure({ adapter: new Adapter() })
 
 const Noop = (props) => { return <p>Noop</p> };
 
