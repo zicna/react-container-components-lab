@@ -33,10 +33,12 @@ class SearchableMovieReviewsContainer extends Component {
       <div className="searchable-movie-reviews">
         <form onSubmit={this.handleSubmit}>
           <label htmlFor='search-input'>Search Movie Reviews</label>
+
           <input
             id='search-input'
             type="text"
             style={{width: 300}}
+
             onChange={this.handleSearchInputChange} />
           <button type="submit">Submit</button>
         </form>
@@ -47,4 +49,6 @@ class SearchableMovieReviewsContainer extends Component {
   }
 }
 
+
 export default SearchableMovieReviewsContainer;
+
