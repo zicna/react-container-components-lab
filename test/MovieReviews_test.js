@@ -26,12 +26,6 @@ describe('<MovieReviews />', () => {
     );
   });
 
-  it('should have defaultProp "reviews"', () => {
-    const defaultProps = MovieReviews.defaultProps;
-    expect(defaultProps, 'defaultProps is not defined.').to.exist;
-    expect(defaultProps).to.have.key('reviews');
-  });
-
   it('should have a top-level component with class "review-list"', () => {
     expect(wrapper.hasClass('review-list')).to.be.true;
   });

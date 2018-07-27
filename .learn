@@ -2,6 +2,7 @@ tags:
   - react
   - containers
   - components
+  - async
 languages:
   - javascript
 resources:

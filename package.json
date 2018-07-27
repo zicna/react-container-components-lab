@@ -2,6 +2,14 @@
   "name": "react-container-components-lab",
   "version": "0.1.0",
   "private": true,
+  "babel": {
+    "presets": [
+      "airbnb",
+      "env",
+      "stage-0",
+      "react"
+    ]
+  },
   "devDependencies": {
     "jsdom": "^9.9.1",
     "mocha": "^5.2.0",
@@ -20,7 +28,6 @@
     "chai": "^4.1.2",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.0.1",
-    "expect": "^21.2.1",
     "isomorphic-fetch": "^2.2.1",
     "mocha-multi": "^1.0.1",
     "react": "^16.4.1",
