@@ -16,7 +16,7 @@ class LatestMovieReviewsContainer extends Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     fetch(URL)
       .then(res => res.json())
       .then(response => this.setState({ reviews: response.results }));
@@ -31,5 +31,6 @@ class LatestMovieReviewsContainer extends Component {
     );
   }
 }
+
 
 export default LatestMovieReviewsContainer;
