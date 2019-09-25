@@ -83,6 +83,6 @@ documentation](http://developer.nytimes.com/movie_reviews_v2.json#/Documentation
 
 - [Container Components](https://medium.com/@learnreact/container-components-c0e67432e005#.2kd1wuyp4)
 - [CSS Tricks: Container Components](https://css-tricks.com/learning-react-container-components/)
-- [_New York Times_ Movie Reviews API Documentation](http://developer.nytimes.com/movie_reviews_v2.json#/Documentation)
+- [_New York Times_ Movie Reviews API Documentation](https://developer.nytimes.com/docs/movie-reviews-api/1/overview)
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/react-container-components-lab'>Container Components Lab</a> on Learn.co and start learning to code for free.</p>
