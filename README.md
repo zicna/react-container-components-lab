@@ -63,21 +63,24 @@ to the following URLs:
 * To query the search API: `https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=<search-term>`
 
 In addition to making calls to these URLs, you will need to request an API key
-from [here](https://developer.nytimes.com/signup). Once you have the key, you
+from [here][]. Once you have the key, you
 will "sign" your requests by attaching the key to the URL like so:
+
+[here]: https://developer.nytimes.com/get-started
 
 ```
 https://api.nytimes.com/svc/movies/v2/reviews/all.json?api-key=<your key here>
 ```
 
 For fetching from the API, make sure to use
-[isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch), which
-provides a particularly nice API.
+[isomorphic-fetch][], which provides a particularly nice API.
 
-For further information about the _New York Times_ Movie Reviews API — including
-a sandbox where you can view the data that the API returns — please consult
-[their
-documentation](http://developer.nytimes.com/movie_reviews_v2.json#/Documentation/GET/reviews/search.json).
+[isomorphic-fetch]: https://github.com/matthew-andrews/isomorphic-fetch
+
+For further information about the _New York Times_ Movie Reviews API, please consult
+[their documentation][].
+
+[their documentation]: https://developer.nytimes.com/docs/movie-reviews-api/1/routes/reviews/search.json/get
 
 ## Resources
 
