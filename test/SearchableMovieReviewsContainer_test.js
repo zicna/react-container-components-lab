@@ -46,10 +46,6 @@ describe('<SearchableMovieReviewsContainer />', () => {
     expect(wrapper.state()).to.have.all.keys('searchTerm', 'reviews');
   });
 
-  it('should have top-level element with class "searchable-movie-reviews"', () => {
-    expect(wrapper.hasClass('searchable-movie-reviews'), 'Missing top-level element with class "searchable-movie-reviews"').to.be.true;
-  });
-
   it('should fetch data from the New York Times API on form submission', () => {
     let form = wrapper.find('form').first()
     form.simulate('submit', { preventDefault: () => {} })
