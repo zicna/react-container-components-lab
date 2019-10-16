@@ -11,6 +11,10 @@ Enzyme.configure({ adapter: new Adapter() })
 
 const Noop = (props) => { return <p>Noop</p> };
 
+function isStateless(Component) {
+  return !Component.prototype.render;
+}
+
 describe('<SearchableMovieReviewsContainer />', () => {
   let wrapper;
   let fetchSpy;
@@ -20,8 +24,15 @@ describe('<SearchableMovieReviewsContainer />', () => {
 
     fetchSpy = spy(global, "fetch")
 
-    wrapper = !SearchableMovieReviewsContainer.prototype ?
-      shallow(<Noop />) : shallow(<SearchableMovieReviewsContainer />);
+    if (!SearchableMovieReviewsContainer.prototype) {
+      wrapper = shallow(<Noop />)
+    } else {
+      if (isStateless(SearchableMovieReviewsContainer)) {
+        wrapper = shallow(<SearchableMovieReviewsContainer />)
+      } else {
+        wrapper = mount(<SearchableMovieReviewsContainer />);
+      }
+    }
   });
 
   it('should have state', () => {
