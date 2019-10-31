@@ -70,7 +70,7 @@ can "sign" your requests by attaching the key to the URL like so:
 
 ```
 https://api.nytimes.com/svc/movies/v2/reviews/all.json?api-key=<your-api-key>
-https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=<search-term>&api-key=<your-api-key>
+https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=<your-api-key>&query=<search-term>
 ```
 
 For further information about the _New York Times_ Movie Reviews API — including
