@@ -69,7 +69,7 @@ from [here](https://developer.nytimes.com/signup). Once you have the key, you
 will "sign" your requests by attaching the key to the URL like so:
 
 ```
-https://api.nytimes.com/svc/movies/v2/reviews/all.json?api-key=dGpQ5OmGP2SgfvZimlpCUoF4iOag9qzZ&query=<search-term>
+https://api.nytimes.com/svc/movies/v2/reviews/all.json?api-key=<your-api-key>&query=<search-term>
 ```
 
 For fetching from the API, make sure to use
