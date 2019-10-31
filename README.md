@@ -35,6 +35,8 @@ sense to start with the more static (and thus simpler)
 specification for the components, but here are the main points that you should
 follow as you work:
 
+**Note:** Your tests will not run properly until you have at least built out the basics of each component and export/import them properly.
+
 #### `<MovieReviews>`
 
 * Your `MovieReviews` component should be stateless and functional.
