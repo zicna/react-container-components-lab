@@ -23,7 +23,6 @@ export default class SearchableMovieReviewsContainer extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    // console.log("this for has been submited");
     fetch(`${URL}&query=${this.state.searchTerm}`)
       .then((response) => response.json())
       .then((data) => {
