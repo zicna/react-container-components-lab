@@ -18,16 +18,17 @@ export default class LatestMovieReviewsContainer extends Component {
     fetch(URL)
       .then((response) => response.json())
       .then((data) => {
-        //   console.log(data)
           this.setState({
               reviews: data.results
           })
         });
   }
+
+
   render() {
     return (
-    <ul className='latest-movie-reviews'>
-        {this.state.reviews.map(movie=> < MovieReviews movie={movie}/>)}
-    </ul>);
+    <div className='latest-movie-reviews'>
+        < MovieReviews reviews={this.state.reviews}/>
+    </div>);
   }
 }

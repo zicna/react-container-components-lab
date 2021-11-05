@@ -1,11 +1,11 @@
 // Code MovieReviews Here
 import React from 'react'
 
-export default function MovieReviews({movie}) {
+export default function MovieReviews({reviews}) {
     return (
-        <li>
-            {movie.display_title}
-        </li>
+        <ul className="review-list">
+           {reviews.map(review => <li className="review">{review.display_title}</li>)}
+        </ul>
     )
 }
 
