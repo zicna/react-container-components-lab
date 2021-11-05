@@ -24,10 +24,14 @@ export default class LatestMovieReviewsContainer extends Component {
           })
         });
   }
+
+
   render() {
+    // const x = this.state.reviews.map(movie=> < MovieReviews movie={movie}/>)
     return (
-    <ul className='latest-movie-reviews'>
-        {this.state.reviews.map(movie=> < MovieReviews movie={movie}/>)}
-    </ul>);
+    <div className='latest-movie-reviews'>
+        {/* <h2>Latest Movies Reviews</h2> */}
+        < MovieReviews reviews={this.state.reviews}/>
+    </div>);
   }
 }
